@@ -16,22 +16,11 @@
 		076C9D221905623E009C1404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076C9D201905623E009C1404 /* Main.storyboard */; };
 		076C9D251905623E009C1404 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C9D241905623E009C1404 /* ViewController.m */; };
 		076C9D271905623E009C1404 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076C9D261905623E009C1404 /* Images.xcassets */; };
-		076C9D2E1905623E009C1404 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076C9D2D1905623E009C1404 /* XCTest.framework */; };
-		076C9D2F1905623E009C1404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076C9D0E1905623E009C1404 /* Foundation.framework */; };
-		076C9D301905623E009C1404 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076C9D121905623E009C1404 /* UIKit.framework */; };
-		076C9D381905623E009C1404 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076C9D361905623E009C1404 /* InfoPlist.strings */; };
-		076C9D3A1905623E009C1404 /* CommandPatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C9D391905623E009C1404 /* CommandPatternTests.m */; };
+		076C9D4619056361009C1404 /* Invoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C9D4519056361009C1404 /* Invoker.m */; };
+		076C9D49190564D2009C1404 /* MakeLighterCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C9D48190564D2009C1404 /* MakeLighterCommand.m */; };
+		076C9D4E19065002009C1404 /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C9D4D19065002009C1404 /* Receiver.m */; };
+		076C9D51190665C5009C1404 /* MakeDarkerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C9D50190665C5009C1404 /* MakeDarkerCommand.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		076C9D311905623E009C1404 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 076C9D031905623E009C1404 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 076C9D0A1905623E009C1404;
-			remoteInfo = CommandPattern;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		076C9D0B1905623E009C1404 /* CommandPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,11 +37,16 @@
 		076C9D231905623E009C1404 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		076C9D241905623E009C1404 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		076C9D261905623E009C1404 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		076C9D2C1905623E009C1404 /* CommandPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommandPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		076C9D2D1905623E009C1404 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		076C9D351905623E009C1404 /* CommandPatternTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CommandPatternTests-Info.plist"; sourceTree = "<group>"; };
-		076C9D371905623E009C1404 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		076C9D391905623E009C1404 /* CommandPatternTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandPatternTests.m; sourceTree = "<group>"; };
+		076C9D431905630E009C1404 /* Command.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		076C9D4419056361009C1404 /* Invoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invoker.h; sourceTree = "<group>"; };
+		076C9D4519056361009C1404 /* Invoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invoker.m; sourceTree = "<group>"; };
+		076C9D47190564D2009C1404 /* MakeLighterCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLighterCommand.h; sourceTree = "<group>"; };
+		076C9D48190564D2009C1404 /* MakeLighterCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeLighterCommand.m; sourceTree = "<group>"; };
+		076C9D4C19065002009C1404 /* Receiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
+		076C9D4D19065002009C1404 /* Receiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
+		076C9D4F190665C5009C1404 /* MakeDarkerCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeDarkerCommand.h; sourceTree = "<group>"; };
+		076C9D50190665C5009C1404 /* MakeDarkerCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeDarkerCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		076C9D291905623E009C1404 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				076C9D2E1905623E009C1404 /* XCTest.framework in Frameworks */,
-				076C9D301905623E009C1404 /* UIKit.framework in Frameworks */,
-				076C9D2F1905623E009C1404 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				076C9D141905623E009C1404 /* CommandPattern */,
-				076C9D331905623E009C1404 /* CommandPatternTests */,
+				076C9D151905623E009C1404 /* Supporting Files */,
 				076C9D0D1905623E009C1404 /* Frameworks */,
 				076C9D0C1905623E009C1404 /* Products */,
 			);
@@ -93,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				076C9D0B1905623E009C1404 /* CommandPattern.app */,
-				076C9D2C1905623E009C1404 /* CommandPatternTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,11 +97,18 @@
 			children = (
 				076C9D1D1905623E009C1404 /* AppDelegate.h */,
 				076C9D1E1905623E009C1404 /* AppDelegate.m */,
-				076C9D201905623E009C1404 /* Main.storyboard */,
 				076C9D231905623E009C1404 /* ViewController.h */,
 				076C9D241905623E009C1404 /* ViewController.m */,
-				076C9D261905623E009C1404 /* Images.xcassets */,
-				076C9D151905623E009C1404 /* Supporting Files */,
+				076C9D4419056361009C1404 /* Invoker.h */,
+				076C9D4519056361009C1404 /* Invoker.m */,
+				076C9D4C19065002009C1404 /* Receiver.h */,
+				076C9D4D19065002009C1404 /* Receiver.m */,
+				076C9D431905630E009C1404 /* Command.h */,
+				076C9D47190564D2009C1404 /* MakeLighterCommand.h */,
+				076C9D48190564D2009C1404 /* MakeLighterCommand.m */,
+				076C9D4F190665C5009C1404 /* MakeDarkerCommand.h */,
+				076C9D50190665C5009C1404 /* MakeDarkerCommand.m */,
+				076C9D201905623E009C1404 /* Main.storyboard */,
 			);
 			path = CommandPattern;
 			sourceTree = "<group>";
@@ -126,30 +116,14 @@
 		076C9D151905623E009C1404 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				076C9D261905623E009C1404 /* Images.xcassets */,
 				076C9D161905623E009C1404 /* CommandPattern-Info.plist */,
 				076C9D171905623E009C1404 /* InfoPlist.strings */,
 				076C9D1A1905623E009C1404 /* main.m */,
 				076C9D1C1905623E009C1404 /* CommandPattern-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		076C9D331905623E009C1404 /* CommandPatternTests */ = {
-			isa = PBXGroup;
-			children = (
-				076C9D391905623E009C1404 /* CommandPatternTests.m */,
-				076C9D341905623E009C1404 /* Supporting Files */,
-			);
-			path = CommandPatternTests;
-			sourceTree = "<group>";
-		};
-		076C9D341905623E009C1404 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				076C9D351905623E009C1404 /* CommandPatternTests-Info.plist */,
-				076C9D361905623E009C1404 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = CommandPattern;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,24 +146,6 @@
 			productReference = 076C9D0B1905623E009C1404 /* CommandPattern.app */;
 			productType = "com.apple.product-type.application";
 		};
-		076C9D2B1905623E009C1404 /* CommandPatternTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 076C9D401905623E009C1404 /* Build configuration list for PBXNativeTarget "CommandPatternTests" */;
-			buildPhases = (
-				076C9D281905623E009C1404 /* Sources */,
-				076C9D291905623E009C1404 /* Frameworks */,
-				076C9D2A1905623E009C1404 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				076C9D321905623E009C1404 /* PBXTargetDependency */,
-			);
-			name = CommandPatternTests;
-			productName = CommandPatternTests;
-			productReference = 076C9D2C1905623E009C1404 /* CommandPatternTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,12 +153,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = MediaNet;
-				TargetAttributes = {
-					076C9D2B1905623E009C1404 = {
-						TestTargetID = 076C9D0A1905623E009C1404;
-					};
-				};
+				ORGANIZATIONNAME = "Pablo Rueda";
 			};
 			buildConfigurationList = 076C9D061905623E009C1404 /* Build configuration list for PBXProject "CommandPattern" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -218,7 +169,6 @@
 			projectRoot = "";
 			targets = (
 				076C9D0A1905623E009C1404 /* CommandPattern */,
-				076C9D2B1905623E009C1404 /* CommandPatternTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,14 +184,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		076C9D2A1905623E009C1404 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				076C9D381905623E009C1404 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,29 +191,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076C9D49190564D2009C1404 /* MakeLighterCommand.m in Sources */,
 				076C9D251905623E009C1404 /* ViewController.m in Sources */,
+				076C9D4E19065002009C1404 /* Receiver.m in Sources */,
+				076C9D51190665C5009C1404 /* MakeDarkerCommand.m in Sources */,
 				076C9D1F1905623E009C1404 /* AppDelegate.m in Sources */,
+				076C9D4619056361009C1404 /* Invoker.m in Sources */,
 				076C9D1B1905623E009C1404 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		076C9D281905623E009C1404 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				076C9D3A1905623E009C1404 /* CommandPatternTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		076C9D321905623E009C1404 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 076C9D0A1905623E009C1404 /* CommandPattern */;
-			targetProxy = 076C9D311905623E009C1404 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		076C9D171905623E009C1404 /* InfoPlist.strings */ = {
@@ -288,14 +218,6 @@
 				076C9D211905623E009C1404 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		076C9D361905623E009C1404 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				076C9D371905623E009C1404 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -397,46 +319,6 @@
 			};
 			name = Release;
 		};
-		076C9D411905623E009C1404 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CommandPattern.app/CommandPattern";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CommandPattern/CommandPattern-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CommandPatternTests/CommandPatternTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		076C9D421905623E009C1404 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CommandPattern.app/CommandPattern";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CommandPattern/CommandPattern-Prefix.pch";
-				INFOPLIST_FILE = "CommandPatternTests/CommandPatternTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,14 +338,7 @@
 				076C9D3F1905623E009C1404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		076C9D401905623E009C1404 /* Build configuration list for PBXNativeTarget "CommandPatternTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				076C9D411905623E009C1404 /* Debug */,
-				076C9D421905623E009C1404 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

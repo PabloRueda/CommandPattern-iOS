@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  Invoker.m
 //
 //  Copyright (C) 2014 Pablo Rueda
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -13,10 +13,39 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 //  IN THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "Invoker.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface Invoker()
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSMutableArray *commandQueue;
+
+@end
+
+@implementation Invoker
+
+- (id)initSharedInstance {
+    self = [super init];
+    if (self) {
+        _commandQueue = [NSMutableArray array];
+    }
+    return self;
+}
+
++ (instancetype)sharedInstance {
+    static Invoker *sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    
+    dispatch_once(&oncePredicate, ^{
+        sharedInstance = [[Invoker alloc] initSharedInstance];
+    });
+    
+    return sharedInstance;
+}
+
+- (void)addAndExecute:(id<Command>)command {
+    
+    [self.commandQueue addObject:command];
+    [command execute];
+}
 
 @end

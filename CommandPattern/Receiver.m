@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  Receiver.m
 //
 //  Copyright (C) 2014 Pablo Rueda
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -13,10 +13,26 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 //  IN THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "Receiver.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation Receiver
 
-@property (strong, nonatomic) UIWindow *window;
+- (void)setColorView:(UIView *)colorView {
+    _colorView = colorView;
+    UIColor *color = self.colorView.backgroundColor;
+    [color getHue:&_hue saturation:&_saturation brightness:&_brightness alpha:&_alpha];
+}
+
+- (void)makeViewLighter:(CGFloat)quantity {
+    _brightness += quantity;
+    _brightness = MIN(1, _brightness);
+    self.colorView.backgroundColor = [UIColor colorWithHue:_hue saturation:_saturation brightness:_brightness alpha:_alpha];
+}
+
+- (void)makeViewDarker:(CGFloat)quantity {
+    _brightness -= quantity;
+    _brightness = MAX(0, _brightness);
+    self.colorView.backgroundColor = [UIColor colorWithHue:_hue saturation:_saturation brightness:_brightness alpha:_alpha];
+}
 
 @end
